@@ -1,9 +1,26 @@
 body {
     display:flex;
-    flex-direction:row;
+    justify-content:center;
     background-color:black;
-    color:white;
+    
+}
+#songs {
+    justify-content:center;
 }
 #info {
-    outline: 2px solid blue
+    margin: 5px;
+    background-color:pink;
 }
+h2 {
+    color:white;
+   margin-left: 20px;
+   font-family: 'Berkshire Swash', cursive;
+   border-bottom: 5px solid white;
+}
+
+@media screen and (max-width:800px) {
+    .left, .main, .right {
+      width:100%; 
+    }
+  }
+  

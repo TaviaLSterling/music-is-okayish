@@ -16,11 +16,11 @@ for (let i = 0; i < songs.length; i++) {
       template += `
       
       <div id="info" class="col-sm-3">
-      <p>Song: ${song.title}</p>
-      <img src="${song.albumArt}">
-      <p>Artist: ${song.artist}</p>
-      <p>Price: ${song.price}</p>
-      <p>Album Name: ${song.collection}</p>
+      <p><strong>Song:</strong> ${song.title}</p>
+      <img class="img-fluid" src="${song.albumArt}">
+      <p><strong>Artist:</strong> ${song.artist}</p>
+      <p><strong>Price:</strong> ${song.price}</p>
+      <p><strong>Album Name:</strong> ${song.collection}</p>
       <audio class="audio" controls="controls" src="${song.preview}"</audio>
       </div>
       
@@ -28,6 +28,7 @@ for (let i = 0; i < songs.length; i++) {
   }
   document.getElementById('songs').innerHTML = template
 }
+// found this as an option to pause the current audio when new audio starts
 document.addEventListener('play', function(e){
   var audios = document.getElementsByTagName('audio');
   for(var i = 0, len = audios.length; i < len;i++){
