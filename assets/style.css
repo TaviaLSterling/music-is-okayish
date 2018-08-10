@@ -1,0 +1,9 @@
+body {
+    display:flex;
+    flex-direction:row;
+    background-color:black;
+    color:white;
+}
+#info {
+    outline: 2px solid blue
+}

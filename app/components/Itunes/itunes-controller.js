@@ -5,22 +5,25 @@ import ItunesService from "./itunes-service.js";
 const itunesService = new ItunesService()
 
 function drawSongs(songs) {
-  console.log(songs)
- let template = '' 
- //YOUR CODING STARTS HERE
+  //console.log(songs)
+  //YOUR CODING STARTS HERE
+
+  let template = '' 
+
 for (let i = 0; i < songs.length; i++) {
       const song = songs[i];
   
-  
       template += `
-      <div class="col-3">
+      
+      <div id="info" class="col-sm-3">
       <p>Song: ${song.title}</p>
-      <p>Album Art: ${song.albumArt}</p>
+      <img src="${song.albumArt}">
       <p>Artist: ${song.artist}</p>
-      <p>Artist: ${song.price}</p>
+      <p>Price: ${song.price}</p>
       <p>Album Name: ${song.collection}</p>
-      <p>Preview: ${song.preview}</p>
-  </div>
+      <audio class="audio" controls="controls" src="${song.preview}"</audio>
+      </div>
+      
       `  
   }
   document.getElementById('songs').innerHTML = template
@@ -33,7 +36,7 @@ for (let i = 0; i < songs.length; i++) {
 //PUBLIC
 class ItunesController {
   constructor() {
-    drawSongs()
+   // drawSongs()
   }
   //DO NOT MODIFY THIS METHOD
   getMusic(e) {
