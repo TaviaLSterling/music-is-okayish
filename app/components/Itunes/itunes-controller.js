@@ -14,7 +14,7 @@ function drawSongs(songs) {
     const song = songs[i];
 
     template += `
-      
+     
       <div id="info" class="col-sm-3">
       <p><strong>Song:</strong> ${song.title}</p>
       <img class="img-fluid" src="${song.albumArt}">

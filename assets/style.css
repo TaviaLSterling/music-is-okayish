@@ -1,7 +1,7 @@
 body {
     display:flex;
     justify-content:center;
-    background-image: url('/assets/galaxy-background.gif');
+    background-image: url('https://gifer.com/i/4MES.gif');
     background-image: cover;
 
 }
