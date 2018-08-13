@@ -8,12 +8,12 @@ function drawSongs(songs) {
   //console.log(songs)
   //YOUR CODING STARTS HERE
 
-  let template = '' 
+  let template = ''
 
-for (let i = 0; i < songs.length; i++) {
-      const song = songs[i];
-  
-      template += `
+  for (let i = 0; i < songs.length; i++) {
+    const song = songs[i];
+
+    template += `
       
       <div id="info" class="col-sm-3">
       <p><strong>Song:</strong> ${song.title}</p>
@@ -24,17 +24,17 @@ for (let i = 0; i < songs.length; i++) {
       <audio class="audio" controls="controls" src="${song.preview}"</audio>
       </div>
       
-      `  
+      `
   }
   document.getElementById('songs').innerHTML = template
 }
 // found this as an option to pause the current audio when new audio starts
-document.addEventListener('play', function(e){
+document.addEventListener('play', function (e) {
   var audios = document.getElementsByTagName('audio');
-  for(var i = 0, len = audios.length; i < len;i++){
-      if(audios[i] != e.target){
-          audios[i].pause();
-      }
+  for (var i = 0, len = audios.length; i < len; i++) {
+    if (audios[i] != e.target) {
+      audios[i].pause();
+    }
   }
 }, true);
 
@@ -44,7 +44,7 @@ document.addEventListener('play', function(e){
 //PUBLIC
 class ItunesController {
   constructor() {
-   // drawSongs()
+    // drawSongs()
   }
   //DO NOT MODIFY THIS METHOD
   getMusic(e) {
@@ -55,7 +55,7 @@ class ItunesController {
     itunesService.getMusicByArtist(artist).then(results => {
       drawSongs(results)
       //changes button back to GET MUSIC once songs are loaded
-      $('#get-music-button').text('GET MUSIC');
+      $('#get-music-button').text('GET MORE MUSIC');
     })
   }
 

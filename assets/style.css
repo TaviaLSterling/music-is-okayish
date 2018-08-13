@@ -1,15 +1,17 @@
 body {
     display:flex;
     justify-content:center;
-    background-color:black;
-    
+    background-image: url('http://pluspng.com/img-png/download-png-image-space-png-pic-1920.gif');
+    background-image: cover;
+
 }
 #songs {
     justify-content:center;
 }
 #info {
-    margin: 5px;
+    margin: 20px;
     background-color:pink;
+    outline: 5px solid purple;
 }
 h2 {
     color:white;
