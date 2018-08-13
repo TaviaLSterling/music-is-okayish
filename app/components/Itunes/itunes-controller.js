@@ -29,6 +29,7 @@ function drawSongs(songs) {
   document.getElementById('songs').innerHTML = template
 }
 // found this as an option to pause the current audio when new audio starts
+// but does not use only one audio tag - couldn't figure that out
 document.addEventListener('play', function (e) {
   var audios = document.getElementsByTagName('audio');
   for (var i = 0, len = audios.length; i < len; i++) {

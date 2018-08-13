@@ -1,7 +1,7 @@
 body {
     display:flex;
     justify-content:center;
-    background-image: url('http://pluspng.com/img-png/download-png-image-space-png-pic-1920.gif');
+    background-image: url('/assets/galaxy-background.gif');
     background-image: cover;
 
 }
